@@ -83,7 +83,7 @@ def convert_utc_to_ist_datetime(timestamp_utc):
     utc_datetime = datetime.utcfromtimestamp(timestamp_utc)
     utc_datetime = utc_datetime.replace(tzinfo=timezone.utc)
     ist_datetime = utc_datetime.astimezone(timezone(timedelta(hours=5, minutes=30)))
-    converted_ist_timestamp = convert_utc_to_ist_datetime(ist_datetime)
+    converted_ist_timestamp = ist_datetime.strftime('%Y-%m-%d %H:%M')
     return converted_ist_timestamp
 
 def remove_html_tags(html_content):
