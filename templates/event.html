@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Latest Events</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+
+img {
+  height: 50px ;
+  border-radius: 5px;
+
+}
+#LatestEvents{
+    background-image: url(images/bgoflatestevent.png);
+    background-size:contain;
+    font-family: 'Poppins', sans-serif;
+}
+#LatestEvents .container {
+font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  
+}
+
+ h1 {
+  font-size: 96px;
+  margin-bottom: 20px;
+  color: #E50000;
+  
+
+}
+
+#LatestEvents h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+ padding-top: 20px;
+ font-weight: bold;
+}
+
+#LatestEvents p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding: 20px;
+  color: #00000080;
+  font-weight: bold;
+  
+}
+
+#LatestEvents .event {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+#LatestEvents .event h2 {
+  margin-top: 0;
+  color: #E50000;
+  font-size: 36px;
+}
+
+#LatestEvents .event.online {
+  background-color: #FFEEEE;
+
+}
+
+#LatestEvents .event.offline {
+  background-color: #FFEEEE;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+.inline-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+    </style>
+ </head>
+ <body>
+  <h1 style="padding-left: 10%;">Latest Events</h1>
+    <div  id="LatestEvents">
+      {% set data_list = data|list %}
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-md-6" id="longnews">
+            <div class="event offline" style="height: 100%;margin-bottom: 20px;">
+              {{ data_list[3][4]|safe }}
+              <div style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="font-weight: bold;">{{ data_list[3][1] }} </h2>
+                <p style="color: black; font-weight: bold;padding: 5px;">{{ data_list[3][3] }}</p>
+            </div>
+            
+              
+                <p>
+                  {{ data_list[3][2] }}
+                </p>
+              </div>
+        </div>
+        <div class="col-md-6" id="shortnews">
+          <div class="event online" style="display: flex; align-items: center; flex-direction: row;">
+            {{ data_list[2][4]|safe }}
+            <div style="margin-left: 10px;">
+              <h2 style="padding-left: 20px;">{{ data_list[2][1] }}</h2>
+             
+              <p style="color: black; font-weight: bold;">{{ data_list[2][3] }}</p>
+            </div>
+          </div>
+          
+          <div class="event online" style="display: flex; align-items: center; flex-direction: row;">
+            {{ data_list[1][4]|safe }}
+            <div style="margin-left: 10px;">
+              <h2 style="padding-left: 20px;">{{ data_list[1][1] }}</h2>
+             
+              <p style="color: black; font-weight: bold;">{{ data_list[1][3] }}</p>
+            </div>
+          </div>
+          <div class="event online" style="display: flex; align-items: center; flex-direction: row;">
+            {{ data_list[0][4]|safe }}
+            <div style="margin-left: 10px;">
+              <h2 style="padding-left: 20px;">{{ data_list[0][1] }}</h2>
+             
+              <p style="color: black; font-weight: bold;">{{ data_list[0][3] }}</p>
+            </div>
+          </div>
+          
+          
+              
+        </div>
+      </div>
+    </div>
+</div>
+<script>
+  // Wait for the document to be fully loaded
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get all img tags within the element with id="short-news"
+    var shortNewsImages = document.querySelectorAll("#shortnews img");
+    var longNewsImages = document.querySelectorAll("#longnews img");
+
+    // Loop through each image and set the height to 200px
+    shortNewsImages.forEach(function(img) {
+      img.style.width = "200px";
+      img.style.height = "188px";
+    });
+    longNewsImages.forEach(function(img) {
+      img.style.width = "auto";
+      img.style.height = "600px";
+    });
+  });
+</script>
+
+ </body>
+</html>
