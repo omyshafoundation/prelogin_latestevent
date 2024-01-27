@@ -1,0 +1,165 @@
+
+
+
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Latest Events</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+
+img {
+  height: 50px ;
+  border-radius: 5px;
+
+}
+#LatestEvents{
+    background-image: "/static/images/bgoflatestevent.png";
+    background-size:cover;
+    font-family: 'Poppins', sans-serif;
+}
+#LatestEvents .container {
+font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  
+}
+
+ h1 {
+  font-size: 96px;
+  margin-bottom: 20px;
+  color: #E50000;
+  
+
+}
+
+#LatestEvents h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+ padding-top: 20px;
+ font-weight: bold;
+}
+
+#LatestEvents p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding: 20px;
+  color: #00000080;
+  font-weight: bold;
+  
+}
+
+#LatestEvents .event {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+#LatestEvents .event h2 {
+  margin-top: 0;
+  color: #E50000;
+  font-size: 36px;
+}
+
+#LatestEvents .event.online {
+  background-color: #FFEEEE;
+  width: 500px;
+
+}
+
+#LatestEvents .event.offline {
+  background-color: #FFEEEE;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+.inline-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+    </style>
+ </head>
+ <body>
+  <h1 style="padding-left: 10%;">Latest Events</h1>
+    <div  id="LatestEvents">
+      
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-md-6" id="longnews">
+            <div class="event offline" style="height: 100%;margin-bottom: 20px;">
+              <img src="https://hub.vong.earth/pluginfile.php/2/calendar/event_description/187/thalljan.jpeg" alt="The ultimate townhall" width="904" height="1280" class="img-fluid atto_image_button_text-bottom">
+              <div style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="font-weight: bold;">The Ultimate Townhall </h2>
+                <p style="color: black; font-weight: bold;padding: 5px;">2024-01-25 16:45</p>
+            </div>
+            
+              
+                <p>
+                  🎉 Hey VONGster’s ! 🌟Guess what?! 🤔 Excitement is in the air because the upcoming Townhall is just around the corner, and we&#39;ve got a surprise waiting for you! 🎁🎊To measure the level of anticipation, let&#39;s play a quick game! 🕵️‍♂️🌈 On a scale of 1 to 10 (1 being &#34;meh&#34; and 10 being &#34;off the charts!&#34;), how pumped are you for the big reveal by our awesome house mentors? 🏠💫1️⃣ - Meh5️⃣ - Can&#39;t wait to know!🔟 - Bursting with excitement!Drop your number in the comments and let&#39;s see which house is bringing the most energy to the Townhall! 🏆💥
+                </p>
+              </div>
+        </div>
+        <div class="col-md-6" id="shortnews">
+          <div class="event online" style="display: flex; align-items: center; flex-direction: row;">
+            <img src="https://hub.vong.earth/pluginfile.php/2/calendar/event_description/186/ccevent2.jpeg" alt="Footprints of changes,How our actions impact climate" width="1080" height="1350" class="img-fluid atto_image_button_text-bottom">
+            <div style="margin-left: 10px;">
+              <h2 style="padding-left: 20px;">Footprints of changes,How our actions impact climate</h2>
+             
+              <p style="color: black; font-weight: bold;">2024-01-31 16:44</p>
+            </div>
+          </div>
+          
+          <div class="event online" style="display: flex; align-items: center; flex-direction: row;">
+            <img src="https://hub.vong.earth/pluginfile.php/2/calendar/event_description/182/Rethinking.jpeg" alt="Rethinking Beauty Standards" width="1080" height="1350" class="img-fluid atto_image_button_text-bottom">
+            <div style="margin-left: 10px;">
+              <h2 style="padding-left: 20px;">Rethinking Beauty Standards</h2>
+             
+              <p style="color: black; font-weight: bold;">2024-02-01 16:35</p>
+            </div>
+          </div>
+          <div class="event online" style="display: flex; align-items: center; flex-direction: row;">
+            <img src="https://hub.vong.earth/pluginfile.php/2/calendar/event_description/183/Transforming.jpeg" alt="Transforming social celebrations into sustainable events" width="1080" height="1350" class="img-fluid atto_image_button_text-bottom">
+            <div style="margin-left: 10px;">
+              <h2 style="padding-left: 20px;">Transforming social celebrations into sustainable events</h2>
+             
+              <p style="color: black; font-weight: bold;">2024-02-02 16:37</p>
+            </div>
+          </div>
+          
+          
+              
+        </div>
+      </div>
+    </div>
+</div>
+<script>
+  // Wait for the document to be fully loaded
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get all img tags within the element with id="short-news"
+    var shortNewsImages = document.querySelectorAll("#shortnews img");
+    var longNewsImages = document.querySelectorAll("#longnews img");
+
+    // Loop through each image and set the height to 200px
+    shortNewsImages.forEach(function(img) {
+      img.style.width = "200px";
+      img.style.height = "188px";
+    });
+    longNewsImages.forEach(function(img) {
+      img.style.width = "100%";
+      img.style.height = "600px";
+    });
+  });
+</script>
+
+ </body>
+</html>

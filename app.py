@@ -90,6 +90,15 @@ def remove_html_tags(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     text_content = soup.get_text()
     return text_content
+from flask import send_from_directory
+
+# ... (your existing Flask code)
+
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    return send_from_directory('static', filename)
+
+# ... (rest of your Flask code)
 
 
 if __name__ == '__main__':
