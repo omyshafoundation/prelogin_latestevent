@@ -31,7 +31,7 @@ def hello_world():
             descriptions = [record[1] for record in last_four_records]
             timestarts = [record[2] for record in last_four_records]
             for i in range(len(timestarts)):
-                timestarts[i] = convert_utc_to_ist(timestarts[i])
+                timestarts[i] = convert_utc_to_ist_datetime(timestarts[i])
 # Create a list of row numbers
             row_numbers = list(range(starting_row_number, starting_row_number + total_records))
             img_variable_list=[]

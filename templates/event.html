@@ -16,8 +16,8 @@ img {
 
 }
 #LatestEvents{
-    background-image: url(images/bgoflatestevent.png);
-    background-size:contain;
+    background-image: "{{ url_for('static', filename='images/bgoflatestevent.png') }}";
+    background-size:cover;
     font-family: 'Poppins', sans-serif;
 }
 #LatestEvents .container {
@@ -69,6 +69,7 @@ font-family: Arial, sans-serif;
 
 #LatestEvents .event.online {
   background-color: #FFEEEE;
+  width: 500px;
 
 }
 
